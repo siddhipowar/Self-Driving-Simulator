@@ -78,6 +78,10 @@ function lerp(a, b, t) {
     return a + (b - a) * t;
 }
 
+function lerp2D(A, B, t) {
+    return new Point(lerp(A.x, B.x, t), lerp(A.y, B.y, t));
+}
+
 function getRandomColor() {
     const hue = Math.floor(Math.random() * 360);
     return `hsl(${hue}, 70%, 60%)`;
